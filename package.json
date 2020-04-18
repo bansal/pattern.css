@@ -1,0 +1,27 @@
+{
+  "name": "pattern.css",
+  "version": "1.0.0",
+  "description": "CSS library of modern background patterns",
+  "main": "pattern.scss",
+  "unpkg": "dist/pattern.min.css",
+  "scripts": {
+    "build-autoprefix": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"cover 99.5%\" -r dist/*.css",
+    "build-dist": "node-sass --output-style expanded --source-map true pattern.scss dist/pattern.css && node-sass --source-map true --output-style compressed pattern.scss dist/pattern.min.css",
+    "build": "npm run build-dist && npm run build-autoprefix"
+  },
+  "author": "bansal-io <hello@bansal.io>",
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "scss",
+    "framework",
+    "ui",
+    "frontend",
+    "pattern"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "node-sass": "^4.13.1",
+    "postcss-cli": "^7.1.0"
+  }
+}

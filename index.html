@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/shorthandcss@1.1.1/dist/shorthand.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="dist/pattern.css" rel="stylesheet">
+    <title>Background Patterns in CSS</title>
+    <meta name="description" content="CSS only library to fill your empty background with beautiful patterns.">
+    <style>
+        code{
+            font-family: monospace;
+            color: red;
+        }
+        aside{
+            width:250px;
+        }
+        .content{
+            left:280px;
+        }
+        @media screen and (max-width: 567px){
+            .content{
+            left:0;
+        }
+        }
+
+    </style>
+</head>
+
+<body class="h-100pc roboto bg-slategray-darkest">
+    <a href="#sidebar" id="sidebar-toggle"
+        class="fixed left-0 bottom-0 m-3 w-l2 h-l2 z-2000 flex justify-center items-center bg-black white br-0 after-menu no-underline after-scale-up-2 sm-hidden"></a>
+    <main class="block relative w-100vw h-100pc z-0">
+        <aside id="sidebar-container" class="fixed-left z-100 ml--100pc sm-ml-0 bg-slategray-darkest ease-500">
+            <nav id="nav" class="p-5 fixed h-100vh sm-w-30pc md-w-20pc overflow-scroll">
+                <div class="fs-s2 flex flex-column">
+                    <a href="#introduction"
+                        class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Introduction</a>
+                    <a href="#installation"
+                        class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Installation</a>
+                    <a href="#usage" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Usage</a>
+                    <a href="#browser-support" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Browser support</a>
+                </div>
+                <div class="fs-s2 fw-600 ls-5 green-light opacity-80 mt-5">EXAMPLES</div>
+                <div class="fs-s2 flex flex-column">
+                    <a href="#hero" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Hero
+                        Background</a>
+                    <a href="#separator" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Separator</a>
+                    <a href="#font" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Font</a>
+                    <a href="#image" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Image</a>
+                </div>
+                <div class="fs-s2 fw-600 ls-5 green-light opacity-80 mt-5">PATTERNS</div>
+                <div class="fs-s2 flex flex-column">
+                    <a href="#checks" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Checks</a>
+                    <a href="#grid" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Grid</a>
+                    <a href="#dots" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Dots</a>
+                    <a href="#cross-dots" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Cross
+                        Dots</a>
+                    <a href="#diagonal-lines"
+                        class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Diagonal Lines</a>
+                    <a href="#vertical-lines"
+                        class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Vertical Lines</a>
+                    <a href="#horizontal-lines"
+                        class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Horizontal Lines</a>
+                    <a href="#diagonal-stripes"
+                        class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Diagonal Stripes</a>
+                    <a href="#vertical-stripes"
+                        class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Vertical Stripes</a>
+                    <a href="#horizontal-stripes"
+                        class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Horizontal Stripes</a>
+                    <a href="#triangles"
+                        class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Triangles</a>
+                    <a href="#zigzag" class="p-2 px-5 br-6 my-1 white opacity-70 no-underline hover-bg-white-10">Zigzag</a>
+                </div>
+            </nav>
+        </aside>
+        <section class="content absolute top-0 bottom-0 right-0">
+            <section id="introduction"
+                class="block w-100pc h-100vh pattern-vertical-lines-lg gray-lighter flex justify-center items-center bg-white br-16">
+                <div class="text-center">
+                    <h1 class="bg-green-light green-darkest pattern-diagonal-lines-sm text-pattern fs-l5 md-fs-xl3 fw-800">
+                        pattern.css
+                    </h1>
+                    <p class="green-darker">CSS only library to fill your empty background with beautiful patterns.                    </p>
+                    <div class="mt-5">
+                        <a href="https://github.com/bansal-io/pattern.css/master/dist/pattern.min.css" target="_blank"
+                            class="slategray-darker fs-s2">Download (&lt; 1kb gzip) </a>
+                    </div>
+                    <div class="mt-10">
+                        <a href="#installation"
+                            class="button-lg bg-green-light green-darkest br-0 no-underline ls-wide fs-s2 uppercase focus-green hover-opacity-100 hover-shift-t-4 ease-300">
+                            Get Start
+                        </a>
+                        <a href="https://github.com/bansal-io/pattern.css"
+                            class="button-lg bg-slategray-darkest green-lighter br-0 no-underline ls-wide fs-s2 uppercase focus-green hover-opacity-100 hover-shift-t-4 ease-300">
+                            View on Github
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="p-5 md-p-l5">
+                <div class="flex flex-wrap">
+                    <div class="w-25pc h-1by1 pattern-checks-md teal-light bg-teal-dark"></div>
+                    <div class="w-25pc h-1by1 pattern-grid-md red bg-white"></div>
+                    <div class="w-25pc h-1by1 pattern-dots-md yellow bg-indigo"></div>
+                    <div class="w-25pc h-1by1 pattern-cross-dots-md white bg-black"></div>
+                    <div class="w-25pc h-1by1 pattern-diagonal-lines-sm red bg-black"></div>
+                    <div class="w-25pc h-1by1 pattern-horizontal-lines-sm yellow bg-wine"></div>
+                    <div class="w-25pc h-1by1 pattern-vertical-lines-md indigo-dark bg-blue-light"></div>
+                    <div class="w-25pc h-1by1 pattern-diagonal-stripes-sm white bg-blue"></div>
+                    <div class="w-25pc h-1by1 pattern-horizontal-stripes-sm white bg-indigo"></div>
+                    <div class="w-25pc h-1by1 pattern-vertical-stripes-sm purple-darkest bg-red-light"></div>
+                    <div class="w-25pc h-1by1 pattern-triangles-lg yellow bg-indigo"></div>
+                    <div class="w-25pc h-1by1 pattern-zigzag-sm yellow bg-red"></div>
+                </div>
+            </section>
+            <section id="installation" class="p-10">
+                <div class="text-center">
+                    <h1 class="green-lighter fs-l3 fw-800 lh-1 my-10">Installation</h1>
+                    <div class=" bg-slategray-lightest p-5 br-8  fs-s2">
+                        <p class="mt-5 slategray-dark">1. pattern.css is available via <a class="green-dark"
+                                href="https://npmjs.com/">npm</a></p>
+                        <div class="br-6 bg-slategray-darker p-5 mt-5">
+                            <pre class="w-100pc overflow-scroll green-light">npm install pattern.css</pre>
+                        </div>
+                        <p class="mt-8 slategray-dark">2. Or you can use cdn <a class="green-dark"
+                                href="https://unpkg.com/shorthandcss">unpkg</a></p>
+                        <div class="br-6 bg-slategray-darker p-5 mt-5">
+                            <pre
+                                class="w-100pc overflow-scroll green-light">&#x3C;link href=&#x22;https://unpkg.com/pattern.css&#x22; rel=&#x22;stylesheet&#x22;&#x3E;</pre>
+                        </div>
+                        <p class="mt-8 slategray-dark">3. Or <a class="green-dark"
+                                href="https://unpkg.com/shorthandcss">Download</a> and include in head</p>
+                        <div class="br-6 bg-slategray-darker p-5 mt-5">
+                            <pre
+                                class="w-100pc overflow-scroll green-light">&#x3C;link href=&#x22;dist/pattern.min.css&#x22; rel=&#x22;stylesheet&#x22;&#x3E;</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="usage" class="p-10">
+                <div>
+                    <h1 class="green-lighter fs-l3 fw-800 lh-1 my-10 text-center">Usage</h1>
+                    <div class=" bg-slategray-lightest p-8 br-8  fs-s1 text-left">
+                        <div class="bg-indigo yellow px-5 py-3 br-3 border-l bw-6 bc-yellow">
+                            Examples in documentation are built using <a href="https://shorthandcss.com" class="white">shorthand framework</a> but this library works with most of the frameworks including bootstrap.
+                        </div>
+                        <p class="mt-5 slategray-dark">There are many possible designs that can be built with css to use as patterns but I have made only few styles that are commonly seen in many award winning website.
+                            <br />
+                            <br />
+                            Any background pattern works with two or more colors. I made with library with considering two color patterns only.
+
+                        </p>
+                        <h2 class="mt-8">Colors</h2>
+                        <p class="mt-5 slategray-dark">
+                            pattern.css is built with two colors only <code>transparent</code> and <code>currentColor</code>.
+                            <br/>
+                            <br/>
+                            currentColor is the current active text color inside a element. To change the color just change the text color property.
+                            <br>
+                            <br>
+                            To change the another color just change the background color, and background color will be visible through transparent color
+                        </p>
+                        <h3 class="mt-8 mb-5">Example</h3>
+                        <small>With <a href="https://shorthandcss.com">shorthand framework</a></small>
+                        <div class="br-6 bg-slategray-darker p-5 mb-5">
+                            <pre class="w-100pc overflow-scroll green-light">&#x3C;div class=&#x22;pattern-checks-sm bg-blue white&#x22;&#x3E;...&#x3C;/div&#x3E;</pre>
+                        </div>
+                        <small class="mb-5">With <a href="https://shorthandcss.com">bootstrap framework</a></small>
+                        <div class="br-6 bg-slategray-darker p-5 mb-5">
+                            <pre class="w-100pc overflow-scroll green-light">&#x3C;div class=&#x22;pattern-checks-sm bg-primary text-white&#x22;&#x3E;...&#x3C;/div&#x3E;</pre>
+                        </div>
+                        <h2 class="mt-8 mb-5">Size</h2>
+                        <p class="mt-5 slategray-dark">Each pattern is available in 4 sizes <code>sm</code>, <code>md</code>, <code>lg</code>, and  <code>xl</code></p>
+                        <div class="flex flex-column">
+                            <div class="p-5 my-3 pattern-diagonal-stripes-sm red bg-orange text-center"> <span class="lh-5 black bg-white-40 px-3 py-2 br-3 mono">.pattern-diagonal-stripes-sm</span></div>
+                            <div class="p-5 my-3 pattern-diagonal-stripes-md red bg-orange text-center"> <span class="lh-5 black bg-white-40 px-3 py-2 br-3 mono">.pattern-diagonal-stripes-md</span></div>
+                            <div class="p-5 my-3 pattern-diagonal-stripes-lg red bg-orange text-center"> <span class="lh-5 black bg-white-40 px-3 py-2 br-3 mono">.pattern-diagonal-stripes-lg</span></div>
+                            <div class="p-5 my-3 pattern-diagonal-stripes-xl red bg-orange text-center"> <span class="lh-5 black bg-white-40 px-3 py-2 br-3 mono">.pattern-diagonal-stripes-xl</span></div>
+                        </div>
+                        <h2 class="mt-8 mb-5">Class</h2>
+
+                        <div class="table-container table-head cell-border overflow-scroll">
+                            <table>
+                                <thead class="slategray-darker fw-400">
+                                    <tr>
+                                        <td>small</td>
+                                        <td>medium</td>
+                                        <td>large</td>
+                                        <td>extra large</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="fs-s3 opacity-60">
+                                    <tr>
+                                        <td><code>pattern-checks-sm</code></td>
+                                        <td><code>pattern-checks-md</code></td>
+                                        <td><code>pattern-checks-lg</code></td>
+                                        <td><code>pattern-checks-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-grid-sm</code></td>
+                                        <td><code>pattern-grid-md</code></td>
+                                        <td><code>pattern-grid-lg</code></td>
+                                        <td><code>pattern-grid-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-dots-sm</code></td>
+                                        <td><code>pattern-dots-md</code></td>
+                                        <td><code>pattern-dots-lg</code></td>
+                                        <td><code>pattern-dots-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-cross-dots-sm</code></td>
+                                        <td><code>pattern-cross-dots-md</code></td>
+                                        <td><code>pattern-cross-dots-lg</code></td>
+                                        <td><code>pattern-cross-dots-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-diagonal-lines-sm</code></td>
+                                        <td><code>pattern-diagonal-lines-md</code></td>
+                                        <td><code>pattern-diagonal-lines-lg</code></td>
+                                        <td><code>pattern-diagonal-lines-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-horizontal-lines-sm</code></td>
+                                        <td><code>pattern-horizontal-lines-md</code></td>
+                                        <td><code>pattern-horizontal-lines-lg</code></td>
+                                        <td><code>pattern-horizontal-lines-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-vertical-lines-sm</code></td>
+                                        <td><code>pattern-vertical-lines-md</code></td>
+                                        <td><code>pattern-vertical-lines-lg</code></td>
+                                        <td><code>pattern-vertical-lines-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-diagonal-stripes-sm</code></td>
+                                        <td><code>pattern-diagonal-stripes-md</code></td>
+                                        <td><code>pattern-diagonal-stripes-lg</code></td>
+                                        <td><code>pattern-diagonal-stripes-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-horizontal-stripes-sm</code></td>
+                                        <td><code>pattern-horizontal-stripes-md</code></td>
+                                        <td><code>pattern-horizontal-stripes-lg</code></td>
+                                        <td><code>pattern-horizontal-stripes-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-vertical-stripes-sm</code></td>
+                                        <td><code>pattern-vertical-stripes-md</code></td>
+                                        <td><code>pattern-vertical-stripes-lg</code></td>
+                                        <td><code>pattern-vertical-stripes-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-triangles-sm</code></td>
+                                        <td><code>pattern-triangles-md</code></td>
+                                        <td><code>pattern-triangles-lg</code></td>
+                                        <td><code>pattern-triangles-xl</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pattern-zigzag-sm</code></td>
+                                        <td><code>pattern-zigzag-md</code></td>
+                                        <td><code>pattern-zigzag-lg</code></td>
+                                        <td><code>pattern-zigzag-xl</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h2 class="white fs-l1 fw-800 lh-1 mb-5 mt-10 text-center">Browser Support</h2>
+            <section id="browser-support" class="br-8 bg-white m-10 p-5 slategray-darker lh-5">
+                pattern.css library depend on four css properties <code>linear-gradient</code>, <code>radial-gradient</code>,
+                <code>repeating-linear-gradient</code> and <code>repeating-radial-gradient</code>
+                <br> which are supported by most browsers.
+                You can check <a href="https://caniuse.com/#search=linear-gradient">caniuse.com</a>
+            </section>
+            <section>
+            <h1 class="green-lighter fs-l3 fw-800 lh-1 my-10 text-center">Examples</h1>
+            <h2 class="white fs-l1 fw-800 lh-1 my-5 text-center">Hero</h2>
+            <section id="hero" class="h-100vh pattern-vertical-lines-md yellow-light bg-yellow flex justify-center items-center bg-fixed">
+                <div>
+                    <h1 class="fs-l5 text-center lh-2 black">Make Your Website <br><span class="border-b bc-blue bw-4"> More</span> Beautiful</h1>
+                    <p class="text-center black opacity-50 fw-600 my-10">by using these simple pattern</p>
+                    <div class="text-center"> 
+                        <div class="">
+                        <a href="#introduction" class="button-lg no-underline br-0 bg-black white fs-s3 ls-wider uppercase hover-opacity-100 focus-white hover-scale-up-1 ease-500" >
+                            <span>Learn More</span></a>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <h2 class="white fs-l1 fw-800 lh-1 mt-5 text-center">Separator</h2>
+
+            <section id="separator" class="flex flex-column">
+                <div class="pattern-dots-sm slategray h-5 my-5">
+                </div>
+                <div class="pattern-checks-sm slategray h-5 my-5">
+                </div>
+                <div class="pattern-diagonal-stripes-sm slategray h-5 my-5">
+                </div>
+                <div class="w-90pc mx-auto p-5">
+                    <div class="bg-slategray-lightest p-5 br-8">
+                        <p class="mt-5 slategray-dark">Use pattern class and set separator height. Example; pattern <code>.pattern-dots-sm</code>, height <code>.h-5</code> and color <code>.slategray</code></p>
+                        <div class="br-6 bg-slategray-darker p-5 mt-5">
+                            <pre class="w-100pc overflow-scroll green-light">&#x3C;div class=&#x22;pattern-dots-sm slategray h-5&#x22;&#x3E;&#x3C;/div&#x3E;</pre>
+                        </div>
+                </div>
+            </div>
+            </section>
+            <h2 class="white fs-l1 fw-800 lh-1 mb-5 mt-10 text-center">Text pattern</h2>
+
+            <section id="font" class="flex flex-column pattern-dots-sm gray-darker br-16 py-l5">
+                    <div class="w-90pc p-5 flex items-center justify-center">
+                        <h3 class="pattern-grid-sm bg-mint white text-pattern fw-800 fs-xl3 md-fs-xl4 lh-1 text-center">
+                            PLAY
+                        </h3>
+                    </div>
+                    <div class="w-90pc mx-auto p-5">
+                        <div class="bg-slategray-lightest p-5 br-8">
+                            <h3 class="fw-400 fs-s1">Fill text with pattern </h3>
+                            <p class="mt-5 slategray-dark">Use <code>.text-pattern</code> class with background
+                                patterns to set text color as pattern</p>
+                            <div class="br-6 bg-slategray-darker p-5 mt-5">
+                                <pre class="w-100pc overflow-scroll green-light">&#x3C;h3 class=&#x22;pattern-checks-sm bg-mint white text-pattern&#x22;&#x3E;PLAY&#x3C;/h3&#x3E;</pre>
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <section class="flex flex-column gray-darker br-16 py-l5">
+
+                        <div class="w-90pc p-5 flex items-center justify-start">
+                            <div class="pattern-dots-md red px-l5 py-5 max-w-20pc overflow-visible ml-5 md-ml-l5">
+                                <h1 class="white fw-800 fs-l5 md-fs-xl3 lh-1">NEXT BEST TEXT </h1>
+                            </div>
+
+                        </div>
+                        <div class="w-90pc mx-auto p-5">
+                            <div class=" bg-slategray-lightest p-5 br-8 mt-10">
+                                <h3 class="fw-400 fs-s1">Text container pattern </h3>
+                                <div class="br-6 bg-slategray-darker p-5 mt-5">
+                                    <pre class="w-100pc overflow-scroll green-light">&#x3C;div class=&#x22;pattern-dots-md red text-pattern max-w-20pc overflow-visible&#x22;&#x3E;
+    &#x3C;h1 class=&#x22;white&#x22;&#x3E;NEXT BEST TEXT&#x3C;/h1&#x3E;
+&#x3C;/div&#x3E;</pre>
+                                </div>
+                            </div>
+                </div>
+            </section>
+            <h2 class="white fs-l1 fw-800 lh-1 mb-5 mt-10 text-center">Image Container</h2>
+
+            <section id="image"  class="flex flex-column gray-darker br-16 py-l5">
+                <div class="w-90pc flex justify-center">
+                    <div class="pattern-dots-md gray-light m-10">
+                        <img class="w-100pc" style="transform:translate(30px, -30px);"
+                            src="https://images.unsplash.com/photo-1488707872600-5507977fe355?auto=format&fit=crop&w=500&q=80"
+                            alt="">
+                    </div>
+                </div>
+                <div class="w-90pc mx-auto p-5">
+                    <div class=" bg-slategray-lightest p-5 br-8 mt-10">
+                        <h3 class="fw-400 fs-s1">Use with image</h3>
+                        <div class="br-6 bg-slategray-darker p-5 mt-5">
+                            <pre class="w-100pc overflow-scroll green-light">&#x3C;div class=&#x22;pattern-dots-md gray-light&#x22;&#x3E;
+&#x3C;img style=&#x22;transform:translate(10px, -10px);&#x22; src=&#x22;...&#x22;/&#x3E;
+&#x3C;/div&#x3E;
+</pre>
+                        </div>
+                    </div>
+            </div>
+            </section>
+            <section class="flex flex-column gray-darker br-16 py-l5">
+                <div class="w-75pc mx-auto flex justify-center m-5">
+                    <div class="pattern-diagonal-lines-sm gray">
+                        <img class="w-100pc" style="transform:translate(20px, -20px);"
+                            src="https://images.unsplash.com/photo-1488707872600-5507977fe355?auto=format&fit=crop&w=500&q=80"
+                            alt="">
+                    </div>
+                </div>
+                <div class="w-90pc mx-auto mt-10">
+                    <div class=" bg-slategray-lightest p-5 br-8">
+                        <h3 class="fw-400 fs-s1">Another pattern with image</h3>
+                        <div class="br-6 bg-slategray-darker p-5 mt-5">
+                            <pre class="w-100pc overflow-scroll green-light">&#x3C;div class=&#x22;pattern-diagonal-lines-sm gray-lighter&#x22;&#x3E;
+&#x3C;img style=&#x22;transform:translate(30px, 30px);&#x22; src=&#x22;...&#x22;/&#x3E;
+&#x3C;/div&#x3E;
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="text-center mt-10 mb-5">
+                <h1 class="green-lighter fs-l3 fw-800 lh-1 my-10 text-center">Patterns</h1>
+            </div>
+            <div class="pattern-checks-md p-2 my-5 slategray-darker">
+            <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">checks</h2>
+            </div>
+            <section id="checks" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white black pattern-checks-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-checks-sm
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow-lighter-90 yellow-dark pattern-checks-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-checks-md
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 green-lighter pattern-checks-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-checks-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 slategray-darker pattern-checks-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-checks-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">grid</h2>
+                </div>
+            <section id="grid" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white black pattern-grid-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-grid-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-pink-lighter red pattern-grid-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-grid-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 slategray-darker pattern-grid-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-grid-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-green-lighter slategray-darker pattern-grid-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-grid-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">dots</h2>
+                </div>
+            <section id="dots" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-light pattern-dots-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-dots-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow-lighter red pattern-dots-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-dots-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 red pattern-dots-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-dots-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-light  pattern-dots-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-dots-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">cross-dots</h2>
+                </div>
+            <section id="cross-dots" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-light pattern-cross-dots-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-cross-dots-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow-lighter yellow-dark pattern-cross-dots-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-cross-dots-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-mint-lighter mint pattern-cross-dots-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-cross-dots-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-light pattern-cross-dots-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-cross-dots-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">diagonal-lines</h2>
+                </div>
+            <section id="diagonal-lines" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-light pattern-diagonal-lines-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-diagonal-lines-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white yellow-dark pattern-diagonal-lines-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-diagonal-lines-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-black yellow-dark pattern-diagonal-lines-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-diagonal-lines-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-light pattern-diagonal-lines-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-diagonal-lines-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">vertical-lines</h2>
+                </div>
+            <section id="vertical-lines" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-light pattern-vertical-lines-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-vertical-lines-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-black yellow-dark pattern-vertical-lines-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-vertical-lines-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-red-90 black pattern-vertical-lines-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-vertical-lines-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-light pattern-vertical-lines-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-vertical-lines-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">horizontal-lines</h2>
+                </div>
+            <section id="horizontal-lines" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-light pattern-horizontal-lines-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-horizontal-lines-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow-70 yellow-darkest pattern-horizontal-lines-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-horizontal-lines-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-orange white pattern-horizontal-lines-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-horizontal-lines-lg
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-light pattern-horizontal-lines-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-horizontal-lines-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">diagonal-stripes</h2>
+                </div>
+            <section id="diagonal-stripes" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-lightest pattern-diagonal-stripes-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-diagonal-stripes-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow-80 yellow-dark pattern-diagonal-stripes-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-diagonal-stripes-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white pink-lightest pattern-diagonal-stripes-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-diagonal-stripes-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow teal-dark pattern-diagonal-stripes-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-diagonal-stripes-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">vertical-stripes</h2>
+                </div>
+            <section id="vertical-stripes" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-lightest pattern-vertical-stripes-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-vertical-stripes-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow-lightest yellow pattern-vertical-stripes-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-vertical-stripes-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white indigo-lightest pattern-vertical-stripes-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-vertical-stripes-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 blue pattern-vertical-stripes-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-vertical-stripes-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">horizontal-stripes</h2>
+                </div>
+            <section id="horizontal-stripes" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-lightest pattern-horizontal-stripes-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-horizontal-stripes-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white yellow pattern-horizontal-stripes-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-horizontal-stripes-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-indigo-lightest white pattern-horizontal-stripes-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-horizontal-stripes-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow teal-dark pattern-horizontal-stripes-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-horizontal-stripes-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">triangles</h2>
+                </div>
+
+            <section id="triangles" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-lightest pattern-triangles-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-triangles-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow-80 yellow-dark pattern-triangles-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-triangles-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-pink-lighter pink pattern-triangles-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-triangles-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow teal-dark pattern-triangles-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-triangles-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="pattern-diagonal-stripes-md p-2 my-5 slategray-darker">
+                <h2 class="text-center fs-s1 fw-600 white uppercase ls-wider">zigzag</h2>
+                </div>
+            <section id="zigzag" class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-lightest pattern-zigzag-sm">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-zigzag-sm
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow-80 yellow-dark pattern-zigzag-md">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-zigzag-md
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-yellow-70 yellow-dark pattern-zigzag-lg">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-zigzag-lg
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="relative h-1by2 bg-white gray-lightest pattern-zigzag-xl">
+                        <div class="absolute-center inline-block br-6 p-2 bg-indigo white fw-300 fs-s2 ls-wider">.pattern-zigzag-xl
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            </section>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var scroll = new SmoothScroll('a[href*="#"]');
+        });
+        // Sidebar toggle
+        $('#sidebar-toggle').on('click', function () {
+            $('#sidebar-container').toggleClass('ml--100pc');
+            return false;
+        });
+
+        $(document).on('click', function (e) {
+            if ($(e.target).closest('#sidebar-container').length == 0) {
+                $('#sidebar-container').addClass('ml--100pc');
+            }
+        });
+    </script>
+
+</body>
