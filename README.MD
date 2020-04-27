@@ -50,6 +50,15 @@ pattern.css can be used with any css framework.
 <div class="pattern-checks-sm bg-primary text-white">...</div>
 ```
 
+### Change color
+
+```css
+:root {
+    --patternCurrentColor: #d40e0e;
+    --patternTransparent: transparent;
+}
+```
+
 ## Pattern Classes
 
 |small|medium|large|extra large|
