@@ -67,6 +67,31 @@ pattern.css can be used with any css framework.
 |pattern-triangles-sm|pattern-triangles-md|pattern-triangles-lg|pattern-triangles-xl|
 |pattern-zigzag-sm|pattern-zigzag-md|pattern-zigzag-lg|pattern-zigzag-xl|
 
+
+## Contributors
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+
+<a href="https://github.com/bansal-io/pattern.css/graphs/contributors"><img src="https://opencollective.com/patterncss/contributors.svg?width=890&button=false" /></a>
+
+### Financial Contributors
+
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/patterncss/contribute)]
+
+#### Individuals
+
+<a href="https://opencollective.com/XX"><img src="https://opencollective.com/patterncss/individuals.svg?width=890"></a>
+
+#### Organizations
+
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/patterncss/contribute)]
+
+<a href="https://opencollective.com/patterncss/organization/0/website"><img src="https://opencollective.com/patterncss/organization/0/avatar.svg"></a>
+
+
+
 ## License
 
 MIT
