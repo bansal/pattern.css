@@ -1,5 +1,6 @@
 # pattern.css
 
+Decorating your applications with mesmerizing backgrounds would be a feast for the eye! 
 CSS only library to fill your empty background with beautiful patterns.
 
 See the full [documentation](https://bansal.io/pattern-css)
